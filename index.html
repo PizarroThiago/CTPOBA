@@ -1,0 +1,2031 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="index.css" rel="stylesheet" type="text/css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap"
+        rel="stylesheet">
+</head>
+
+
+<!------------------------------------------------ header --------------------------------->
+
+
+
+
+
+
+
+
+
+
+<body>
+
+
+
+
+    <div id="header-completo">
+        <div id="header-top">
+            <img id="logoColegio" src="./public/img/header/logoColegioHeader.png" onclick="mostrarHome()">
+        </div>
+        <!-- <p class="letraadmin">Administrador</p>
+    <img src="./public/img/header/administrador.png" alt="administrador" id="abrirModal" class="logoadmin"> -->
+        <div id="header-bottom">
+            <div class="tb-opcion-headerbottom-taller">
+
+                <div class="opcion-headerbottom" id="ul-opcion-headerbottom" onclick="mostrarOpciones()">
+                    <p>Especialidades</p>
+                </div>
+                <div id="tb-especialidades" class="tb-display-none">
+                    <div id="vprogramacion" class="tb_opc-especialidades" onclick="mostrarProgramacion()"><img
+                            class="img-especialidades" src="./public/img/header/programacion-icon.png">Programación
+                    </div>
+                    <div id="vadministracion" class="tb_opc-especialidades" onclick="mostrarAdministracion()"><img
+                            class="img-especialidades" src="./public/img/header/economia-icon.png">Administración y
+                        Gestión</div>
+                    <div id="velctronica" class="tb_opc-especialidades" onclick="mostrarElectronica()"><img
+                            class="img-especialidades" src="./public/img/header/electronica-icon.png">Electrónica</div>
+                    <div id="velectromecanica" class="tb_opc-especialidades" onclick="mostrarElectromecanica()"><img
+                            class="img-especialidades"
+                            src="./public/img/header/electromecanica-icon.png">Electromecánica</div>
+                    <div id="vmmo" class="tb_opc-especialidades" onclick="mostrarMaestroMayorDeObra()"><img
+                            class="img-especialidades" src="./public/img/header/construcciones-icon.png">Maestro Mayor
+                        de Obra</div>
+                </div>
+            </div>
+            <div id="htaller" class="opcion-headerbottom" onclick="mostrarTaller()">
+                <p>Talleres</p>
+            </div>
+            <div id="hpv" class="opcion-headerbottom" onclick="mostrarPreguntasFrecuentes()">
+                <p>Preguntas Frecuentes</p>
+            </div>
+            <a href="#footer" class="a">
+                <div id="hcontacto" class="opcion-headerbottom hcontacto">
+                    <p>Contactos</p>
+                </div>
+            </a>
+            <div id="hpodio" class="opcion-headerbottom" onclick="mostrarPodio()">
+                <p>Podio</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- ------------------------------------------------- ventana del Login ------------------------------------------->
+
+
+    <!-- <div id="miModal" class="modal">
+    <div class="modal-contenido">
+        <h2 class="cv-h2">Iniciar Sesión</h2>
+        <div class="cv-caja">
+            <h3 class="cv-h3">Nombre de usuario</h3>
+            <input class="cv-input" type="text" id="usuario" placeholder="Ingrese el nombre">
+        </div>
+        <div class="cv-caja">
+            <h3 class="cv-h3">Contraseña</h3>
+            <input class="cv-input" type="password" id="contrasena" placeholder="Ingrese la contraseña">
+        </div>
+        <button class="cv-button" onclick="listo()">Listo</button>
+    </div>
+</div> -->
+
+
+    <!-- -------------------------------------------------home ------------------------------------------->
+
+
+
+
+    <div class="home-completo ">
+        <!--Comienzo de la descripcion-->
+        <div class="cv_about">
+            <p>Sobre Nosotros</p>
+        </div>
+        <div class="cv_descripcion">
+            <div>
+                <h1>COLEGIO TÉCNICO PROVINCIAL OLGA B. DE ARKO</h1>
+                <p class="cv-p pcv">El Colegio Técnico Provincial Olga Bronsovich de Arko es un espacio donde la educación técnica y el desarrollo personal se encuentran para formar estudiantes comprometidos con el futuro. Nuestro enfoque está en brindar conocimientos sólidos y prácticos que permitan a nuestros egresados destacarse en distintas áreas de la tecnología y la industria.
+
+                    A partir de un plan de estudios diseñado para equilibrar la teoría con la práctica, nuestros estudiantes exploran proyectos innovadores, desarrollan habilidades técnicas y trabajan en equipo para resolver desafíos reales. Nos enorgullecemos de cultivar una comunidad educativa inclusiva y dinámica, que motiva a los jóvenes a descubrir su pasión y alcanzar su máximo potencial.
+                </p>
+            </div>
+            <div class="cv_video-container">
+                <!--video colegio-->
+                <iframe width="560" height="370" src="https://www.youtube.com/embed/ID_DEL_VIDEO"
+                    title="Video de YouTube" frameborder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                    allowfullscreen>
+                </iframe>
+            </div>
+        </div>
+        <!--fin de la descripcion-->
+
+
+
+        <!-- Comienzo de tarjetas especialidades -->
+        <div class="cv_especialidades_conteiner">
+            <h2>ESPECIALIDADES</h2>
+
+            <div class="cv_especialidades">
+                <div class="cv_especialidad-card cv-mmoTarjeta" onclick="mostrarMaestroMayorDeObra()">
+                    <a>
+                        <img class="default" src="public/img/home/mmo-logo.png" alt="M.M.O">
+                        <img class="hover" src="public/img/home/mmo-blanco.png" alt="M.M.O Hover">
+                    </a>
+                    <p class="cv-p">M.M.O
+                        <br>Maestro Mayor de<br> Obras
+                    </p>
+                </div>
+
+                <div class="cv_especialidad-card" onclick="mostrarAdministracion()">
+                    <a>
+                        <img class="default" src="public/img/home/economia-logo.png" alt="Economía">
+                        <img class="hover" src="public/img/home/economia-blanco.png" alt="Economía Hover">
+                    </a>
+                    <p class="cv-p">Gestión y Administración de Organizaciones</p>
+                </div>
+
+                <div class="cv_especialidad-card" onclick="mostrarProgramacion()">
+                    <a>
+                        <img class="default" src="public/img/home/prog-logo.png" alt="Programación">
+                        <img class="hover" src="public/img/home/prog-blanco.png" alt="Programación Hover">
+                    </a>
+                    <p class="cv-p">Técnico en Programación</p>
+                </div>
+
+                <div class="cv_especialidad-card" onclick="mostrarElectronica()">
+                    <a>
+                        <img class="default" src="public/img/home/electronic-logo.png" alt="Electrónica">
+                        <img class="hover" src="public/img/home/electronic-blanco.png" alt="Electrónica Hover">
+                    </a>
+                    <p class="cv-p">Técnico<br>Electrónico</p>
+                </div>
+
+                <div class="cv_especialidad-card" onclick="mostrarElectromecanica()">
+                    <a></a>
+                    <img class="default" src="public/img/home/electromecanica-logo.png" alt="Electromecánica">
+                    <img class="hover" src="public/img/home/electromecanica-blanco.png" alt="Electromecánica Hover">
+                    </a>
+                    <p class="cv-p">Técnico<br> Electromecánico</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- fin de tarjetas especialidades -->
+
+
+        <!-- banner informativo -->
+        <img class="tp-banner" src="./img/banner.svg" alt="banner-inofrmativo">
+
+
+
+        <!-- commienzo de sector de noticias -->
+
+        <div class="comunicadoIconos" id="iconoscomunicado">
+            <img src="./public/img/dashboard/agregar.png" alt="agregarIcono" class="agregarIcono"
+                onclick="abrirVentComunicado()">
+            <p class="pagregar">Agregar Comunicado</p>
+
+        </div>
+
+
+        <div class="tp-contenedor">
+            <div class="tp-novedades">
+                <h1>Novedades</h1>
+                <div class="novedadIconos" id="iconosnovedad">
+                    <img src="./public/img/dashboard/agregar.png" alt="agregarIcono" class="agregarIcono"
+                        onclick="abrirVentNovedad()">
+                    <p class="pagregar">Nueva Novedad</p>
+                    <img src="./public/img/dashboard/lapiz.png" alt="editar" class="agregarIcono"
+                        onclick="abrirVentComunicado()" onclick="actualizarNovedad()">
+                    <img src="./public/img/dashboard/eliminar.png" alt="eliminar" class="agregarIcono"
+                        onclick="eliminarNovedad()">
+                </div>
+                <div class="tp-slider" id="novedades">
+                    <!-- <div class="tp-item-novedad">
+                     <img src="./img/prueba.jpg" alt="Intertecnos 2024">
+                    <p class="tp-fecha">El lunes 17 de septiembre</p>
+                    <p class="tp-descripcion">ARRANCARON LAS INTERTECNOS 2024 Y EL ROJO ESTÁ PREPARADO PARA GANAR
+                        NUEVAMENTE. ¿LO LOGRARÁN?</p>
+                </div>  -->
+
+                </div>
+            </div>
+            <div class="tp-comunicados">
+                <h2>Comunicados</h2>
+                <div class="tp-lista-comunicados">
+
+                    <div class="tp-item-comunicado">
+                        <div class="tp-icono-fecha">
+                            <img src="./public/img/home/logocole.png" alt="Icono comunicado">
+                        </div>
+                        <div class="tp-detalle-comunicado">
+
+                            <div class="editarcomunicado">
+                                <h3>Suspensión de actividades</h3>
+                                <img src="./public/img/dashboard/lapiz.png" alt="editar" class="editaricono"
+                                    onclick="abrirVentComunicado()" onclick="actualizarComunicado()">
+                                <img src="./public/img/dashboard/eliminar.png" alt="eliminar" class="editaricono"
+                                    onclick="eliminarComunicado()">
+                            </div>
+                            <p class="cv-p">La dirección del Colegio Técnico Provincial "Olga B. de Arko" desea expresar
+                                su profundo
+                                agradecimiento a la empresa XYZ por la donación de equipos tecnológicos. Estos recursos
+                                permitirán mejorar la calidad de la educación en nuestras aulas, beneficiando
+                                directamente a
+                                los estudiantes.</p>
+                            <div class="tp-fecha-comunicado">
+                                <img src="./public/img/home/calendario.png" alt="Icono calendario">
+                                <span>03 de octubre 2024</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="tp-item-comunicado">
+                        <div class="tp-icono-fecha">
+                            <img src="./public/img/home/logocole.png" alt="Icono comunicado">
+                        </div>
+                        <div class="tp-detalle-comunicado">
+                            <div class="editarcomunicado">
+                                <h3>Comunicado</h3>
+                                <img src="./public/img/dashboard/lapiz.png" alt="editar" class="editaricono"
+                                    onclick="abrirVentComunicado()" onclick="actualizarComunicado()">
+                                <img src="./public/img/dashboard/eliminar.png" alt="eliminar" class="editaricono"
+                                    onclick="eliminarComunicado()">
+                            </div>
+                            <p class="cv-p">Estimados miembros de la comunidad educativa, por medio del presente, les
+                                informamos que las
+                                actividades del día de mañana, 20 de octubre de 2024, quedan suspendidas debido a las
+                                inclemencias climáticas que afectan nuestra región. Agradecemos su comprensión y los
+                                mantendremos informados sobre cualquier novedad.
+                                Fecha: 20 de octubre 2024</p>
+                            <div class="tp-fecha-comunicado">
+                                <img src="./public/img/home/calendario.png" alt="Icono calendario">
+                                <span>xx de octubre 2024</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="tp-item-comunicado">
+                        <div class="tp-icono-fecha">
+                            <img src="./public/img/home/logocole.png" alt="Icono comunicado">
+                        </div>
+                        <div class="tp-detalle-comunicado">
+                            <div class="editarcomunicado">
+                                <h3>Comunicado</h3>
+                                <img src="./public/img/dashboard/lapiz.png" alt="editar" class="editaricono"
+                                    onclick="abrirVentComunicado()" onclick="actualizarComunicado()">
+                                <img src="./public/img/dashboard/eliminar.png" alt="eliminar" class="editaricono"
+                                    onclick="eliminarComunicado()">
+                            </div>
+                            <p class="cv-p">Estimados miembros de la comunidad educativa, por medio del presente, les
+                                informamos que las
+                                actividades del día de mañana, 20 de octubre de 2024, quedan suspendidas debido a las
+                                inclemencias climáticas que afectan nuestra región. Agradecemos su comprensión y los
+                                mantendremos informados sobre cualquier novedad.
+                                Fecha: 20 de octubre 2024</p>
+                            <div class="tp-fecha-comunicado">
+                                <img src="./public/img/home/calendario.png" alt="Icono calendario">
+                                <span>xx de octubre 2024</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="tp-item-comunicado">
+                        <div class="tp-icono-fecha">
+                            <img src="./public/img/home/logocole.png" alt="Icono comunicado">
+                        </div>
+                        <div class="tp-detalle-comunicado">
+                            <div class="editarcomunicado">
+                                <h3>Comunicado</h3>
+                                <img src="./public/img/dashboard/lapiz.png" alt="editar" class="editaricono"
+                                    onclick="abrirVentComunicado()" onclick="actualizarComunicado()">
+                                <img src="./public/img/dashboard/eliminar.png" alt="eliminar" class="editaricono"
+                                    onclick="eliminarComunicado()">
+                            </div>
+                            <p class="cv-p">Estimados miembros de la comunidad educativa, por medio del presente, les
+                                informamos que las
+                                actividades del día de mañana, 20 de octubre de 2024, quedan suspendidas debido a las
+                                inclemencias climáticas que afectan nuestra región. Agradecemos su comprensión y los
+                                mantendremos informados sobre cualquier novedad.
+                                Fecha: 20 de octubre 2024</p>
+                            <div class="tp-fecha-comunicado">
+                                <img src="./public/img/home/calendario.png" alt="Icono calendario">
+                                <span>xx de octubre 2024</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="tp-item-comunicado">
+                        <div class="tp-icono-fecha">
+                            <img src="./public/img/home/logocole.png" alt="Icono comunicado">
+                        </div>
+                        <div class="tp-detalle-comunicado">
+                            <div class="editarcomunicado">
+                                <h3>Comunicado</h3>
+                                <img src="./public/img/dashboard/lapiz.png" alt="editar" class="editaricono"
+                                    onclick="abrirVentComunicado()">
+                                <img src="./public/img/dashboard/eliminar.png" alt="eliminar" class="editaricono"
+                                    onclick="eliminarComunicado()">
+                            </div>
+                            <p class="cv-p">Estimados miembros de la comunidad educativa, por medio del presente, les
+                                informamos que las
+                                actividades del día de mañana, 20 de octubre de 2024, quedan suspendidas debido a las
+                                inclemencias climáticas que afectan nuestra región. Agradecemos su comprensión y los
+                                mantendremos informados sobre cualquier novedad.
+                                Fecha: 20 de octubre 2024</p>
+                            <div class="tp-fecha-comunicado">
+                                <img src="./public/img/home/calendario.png" alt="Icono calendario">
+                                <span>xx de octubre 2024</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+
+
+
+        <div id="fondoVentana">
+            <!--Ventana para editar novedades-->
+            <div class="cv-conteiner-novedades cv-contenedorgen" id="contenedor-novedad">
+                <h3>Novedad (visible para todos)</h3>
+                <p>Imagen de la novedad</p>
+                <input placeholder="subir url de la imagen" class="cv-in" id="urlImgNov">
+                <p>Titulo de la novedad (fecha)</p>
+                <input type="text" placeholder="Ingresar titulo" class="cv-in" id="tituloNov">
+                <p>Descripción de la novedad</p>
+                <input type="text" placeholder="Ingresar texto" class="cv-in" id="descNov"><br>
+                <button class="cv-btn" onclick="publicarNovedad()">PUBLICAR</button>
+            </div>
+        </div>
+
+        <div id="fondoEmergente">
+            <!--Ventana para editar comunicados-->
+            <div class="cv-conteiner-comunicados cv-contenedorgen" id="contenedor-comunicado">
+                <h3>Comunicados (visible para todos)</h3>
+                <p>Titulo del comunicado</p>
+                <input type="text" placeholder="Ingresar titulo" class="cv-in" id="tituloCom">
+                <p>Descripción del comunicado</p>
+                <input type="text" placeholder="Ingresar texto" class="cv-in" id="descCom">
+                <p>Fecha del comunicado</p>
+                <input type="text" placeholder="Ingresar fecha" class="cv-in" id="fechaCom"><br>
+                <button class="cv-btn" onclick="publicarComunicado()">PUBLICAR</button>
+            </div>
+        </div>
+
+
+
+        <!-- fin de sector de noticias -->
+
+
+
+
+
+
+        <!--Cominezo seccion testimonios-->
+        <div class="cv_t-conteiner">
+            <h2>TESTIMONIOS</h2>
+            <div class="cv-testimonios">
+                <img src="public/img/home/testimonio.png" alt="reseña">
+                <img src="public/img/home/testimonio.png" alt="reseña">
+                <img src="public/img/home/testimonio.png" alt="reseña">
+                <img src="public/img/home/testimonio.png" alt="reseña">
+            </div>
+        </div>
+        <!--Fin seccion testimonios-->
+
+
+        <!--Comienzo secion mesas asistidas QR-->
+        <div class="cv-mesas-conteiner">
+            <h2>MESAS ASISTIDAS</h2>
+            <div class="cv-contenido-mesas"><!--este se dividira en 3 columnas-->
+                <p class="cv-p">Las mesas asistidas son espacios diseñados<br>para brindar apoyo a los <br>egresados que
+                    necesitan
+                    aprobar <br>5materias pendientes.</p>
+                <img src="public/img/home/QRciclobasico.png" alt="QR">
+                <img src="public/img/home/QRciclosuperior.png" alt="QR">
+            </div>
+        </div>
+
+
+        <!-- carrusel patrocinadores -->
+        <div class="tp-carrusel-empresas-pequeno">
+            <div class="tp-carrusel-empresas-pequeno-contenedor">
+                <div class="tp-carrusel-empresas-pequeno-imagen">
+                    <img src="./public/img/home/carrusel1.svg" alt="Imagen 1">
+                </div>
+                <div class="tp-carrusel-empresas-pequeno-imagen">
+                    <img src="./public/img/home/carrusel2.svg" alt="Imagen 2">
+                </div>
+                <div class="tp-carrusel-empresas-pequeno-imagen">
+                    <img src="./public/img/home/carrusel3.svg" alt="Imagen 3">
+                </div>
+                <div class="tp-carrusel-empresas-pequeno-imagen">
+                    <img src="./public/img/home/carrusel4.svg" alt="Imagen 4">
+                </div>
+                <div class="tp-carrusel-empresas-pequeno-imagen">
+                    <img src="./public/img/home/carrusel5.svg" alt="Imagen 5">
+                </div>
+                <div class="tp-carrusel-empresas-pequeno-imagen">
+                    <img src="./public/img/home/carrusel6.svg" alt="Imagen 6">
+                </div>
+            </div>
+        </div>
+
+
+    </div>
+
+
+
+    <!-- fin del carrusel patrocinadores -->
+    <!-- fin -->
+
+
+
+
+
+
+    <!------------------------------------------------------ programacion------------------------------------------------------>
+
+
+
+
+
+
+
+
+    <div class="btv-programacion-completo display-none">
+        <!-- Empieza Banner -->
+        <div class="bt-banner">
+            <div class="texto-animado">
+                <p class="texto" id="aparece"></p>
+                <!-- <p class="cursor" id="cursor"></p> -->
+            </div>
+        </div>
+        <!-- Termina Banner -->
+
+        <!-- Empieza Navegador -->
+        <nav class="bt-navprogramacion">
+            <ul>
+                <li onclick="presentacion()" class="bt-navprogramacion-after" id="bt-nav-presentacion">
+                    <p class="bt-iconohtml">&lt;&gt;</p>
+                    <p>Presentación</p>
+                </li>
+                <li onclick="alcanceTitulo()" class="bt-navprogramacion-before " id="bt-nav-alcance">
+                    <p class="bt-iconojs">JS</p>
+                    <p> Alcance de Título</p>
+                </li>
+                <li onclick="planEstudio()" class="bt-navprogramacion-before " id="bt-nav-planEstudio">
+                    <p class="bt-iconohtml">&lt;&gt;</p>
+                    <p> Plan de Estudio</p>
+                </li>
+                <li onclick="perfilEgresado()" class="bt-navprogramacion-before " id="bt-nav-perfilEgresado">
+                    <p class="bt-iconojs">JS</p>
+                    <p>Perfil de Egresado</p>
+                </li>
+            </ul>
+        </nav>
+        <!-- Termina Navegador -->
+
+        <!-- Empieza Vista de Presentación -->
+        <section class="bt-presentacion bt-section" id="bt-presentacion">
+            <div class="bt-titulo">
+                <p class="bt-etiqueta-titulo">&lt;h2&gt;</p>
+                <h2 class="bt-titulo-h2">Presentacion</h2>
+                <p class="bt-etiqueta-titulo">&lt;/h2&gt;</p>
+            </div>
+            <div class="bt-texto">
+                <p class="bt-etiqueta">&lt;p&gt;</p>
+                <div class="bt-contenido">
+                    <p class="bt-texto-p">Nuestra tecnicatura te brindará las herramientas necesarias para
+                        convertirte en un desarrollador web altamente calificado, listo para
+                        enfrentar los desafíos del entorno laboral actual.</p>
+                    <br>
+                    <p class="bt-texto-p">A lo largo de esta carrera, adquirirás conocimientos en los lenguajes
+                        más utilizados del sector, como HTML, CSS, JavaScript, y frameworks
+                        modernos. Además, aprenderás sobre bases de datos, seguridad
+                        informática, y las mejores prácticas en desarrollo frontend y backend.</p>
+                    <br>
+                    <p class="bt-texto-p">Nuestro enfoque práctico, combinado con proyectos reales, te preparará
+                        no solo para desarrollar sitios web, sino también para pensar
+                        estratégicamente en la solución de problemas y en la optimización de
+                        la experiencia digital.</p>
+                </div>
+                <p class="bt-etiqueta">&lt;/p&gt;</p>
+            </div>
+        </section>
+        <!-- Termina Vista de Presentación -->
+
+        <!-- Empieza Vista de Alcance de Título -->
+        <section class="bt-alcancetitulo bt-section bt-style-none" id="bt-alcancetitulo">
+            <div class="bt-titulo">
+                <p class="bt-etiqueta-titulo">let</p>
+                <h2 class="bt-alcanceobjeto-titulo">AlcanceDeTitulo</h2>
+                <p class="bt-etiqueta-titulo">=</p>
+            </div>
+            <div class="bt-alcancetitulo-texto">
+                <p>"El Técnico en Programación estará capacitado para realizar programas o componentes de sistemas de
+                    computación – interpretar especificaciones de diseño, documentar los productos realizados, verificar
+                    los componentes programados, buscar causas de malfuncionamiento y corregir los programas o
+                    adaptarlos a cambios en las especificaciones – desarrollando las 
+                    actividades descriptas en el perfil profesional y cumpliendo con los criterios de
+                    realización establecidos para las mismas en el marco de un equipo de trabajo organizado por
+                    proyecto. 
+                    Este Técnico en Programación participa en proyectos de desarrollo de software desempeñando roles que
+                    tienen por objeto producir programas, módulos o componentes de sistemas de computación. Estos
+                    módulos suelen integrarse en aplicaciones que interactúan con otras ya existentes desarrolladas con
+                    la misma o diferente tecnología."</p>
+                <p class="bt-puntocoma">;</p>
+            </div>
+        </section>
+        <!-- Termina Vista de Alcance de Título -->
+
+        <!-- Empieza Perfil de Egresado -->
+        <section class="bt-perfilegresado bt-section bt-style-none" id="bt-perfilEgresado">
+            <div class="bt-titulo">
+                <p class="bt-etiqueta-titulo">let</p>
+                <h2 class="bt-alcanceobjeto-titulo">PerfilProfesional</h2>
+                <p class="bt-etiqueta-titulo bt-etiquetaigual">=</p>
+                <p class=" bt-etiquetallave">&#123;</p>
+            </div>
+            <div class="bt-alcancetitulo-texto">
+                <div class="bt-alcanceobjeto">
+                    <p class="bt-alcanceobjeto-titulo"> TécnicoProgramador: </p>
+                    <p>"El perfil profesional del Técnico en Programación alude al conjunto de
+                        realizaciones profesionales que el técnico puede demostrar en las diversas situaciones de
+                        trabajo propias de su área ocupacional, una vez que ha completado el proceso formativo.<br>
+                        Este perfil involucra un conjunto de competencias que asegura un mayor nivel de especificidad y
+                        profundización en ámbitos contextualizados del saber, saber hacer y saber ser, dentro del sector
+                        profesional de la Informática. Se articula en torno a núcleos curriculares comunes y orientados,
+                        a partir de las demandas socio-productivas del sector y la realidad del medio industrial y de
+                        servicios."</p>
+                </div>
+                <div class="bt-alcance-abajo">
+                    <p class=" bt-etiquetallave">&#125;</p>
+                    <p class="bt-etiquetaigual">;</p>
+                </div>
+
+            </div>
+        </section>
+        <!-- Termina Perfil de Egresado -->
+
+        <!-- Empieza Plan de Estudio -->
+        <section class="bt-planestudio bt-section bt-style-none" id="bt-planEstudio">
+            <div class="bt-titulo">
+                <p class="bt-etiqueta-titulo">&lt;h2&gt;</p>
+                <h2 class="bt-titulo-h2">Plan De Estudio</h2>
+                <p class="bt-etiqueta-titulo">&lt;/h2&gt;</p>
+            </div>
+            <div class="bt-plan-padre">
+                <div class="bt-titulo-materias">
+                    <p class="bt-textoazul">&lt;div class=</p>
+                    <p class="bt-textonaranja">"Materias" </p>
+                    <p class="bt-textoazul">id=</p>
+                    <p class="bt-textonaranja">"4to" </p>
+                    <p class="bt-textoazul">&gt;</p>
+                </div>
+                <div class="bt-materia">
+                    <div class="bt-p-materias">
+                        <p class="bt-textoazul">&lt;p&gt;</p>
+                        <p class="bt-textoblanco"> Estas son las materias que encontrarás en 4to año </p>
+                        <p class="bt-textoazul">&lt;/p&gt;</p>
+                    </div>
+                    <p class="bt-textoazul">&lt;ol&gt;</p>
+                    <div class="bt-materias">
+                        <div class="bt-li-materia">
+                            <p class="bt-textoazul">&lt;li&gt;</p>
+                            <p class="bt-textoblanco"> Taller de Lógica </p>
+                            <p class="bt-textoazul">&lt;li&gt;</p>
+                        </div>
+                        <div class="bt-li-materia">
+                            <p class="bt-textoazul">&lt;li&gt;</p>
+                            <p class="bt-textoblanco"> Hardware </p>
+                            <p class="bt-textoazul">&lt;li&gt;</p>
+                        </div>
+                        <div class="bt-li-materia">
+                            <p class="bt-textoazul">&lt;li&gt;</p>
+                            <p class="bt-textoblanco"> Software I </p>
+                            <p class="bt-textoazul">&lt;li&gt;</p>
+                        </div>
+                        <div class="bt-li-materia">
+                            <p class="bt-textoazul">&lt;li&gt;</p>
+                            <p class="bt-textoblanco"> Programación I </p>
+                            <p class="bt-textoazul">&lt;li&gt;</p>
+                        </div>
+                    </div>
+                    <p class="bt-textoazul">&lt;/ol&gt;</p>
+                </div>
+                <p class="bt-textoazul">&lt;/div&gt;</p>
+
+
+
+                <div class="bt-titulo-materias">
+                    <p class="bt-textoazul">&lt;div class=</p>
+                    <p class="bt-textonaranja">"Materias" </p>
+                    <p class="bt-textoazul">id=</p>
+                    <p class="bt-textonaranja">"5to" </p>
+                    <p class="bt-textoazul">&gt;</p>
+                </div>
+                <div class="bt-materia">
+                    <div class="bt-p-materias">
+                        <p class="bt-textoazul">&lt;p&gt;</p>
+                        <p class="bt-textoblanco"> Estas son las materias que encontrarás en 5to año </p>
+                        <p class="bt-textoazul">&lt;/p&gt;</p>
+                    </div>
+                    <p class="bt-textoazul">&lt;ol&gt;</p>
+                    <div class="bt-materias">
+                        <div class="bt-li-materia">
+                            <p class="bt-textoazul">&lt;li&gt;</p>
+                            <p class="bt-textoblanco"> Lógica Digital </p>
+                            <p class="bt-textoazul">&lt;li&gt;</p>
+                        </div>
+                        <div class="bt-li-materia">
+                            <p class="bt-textoazul">&lt;li&gt;</p>
+                            <p class="bt-textoblanco"> Software II </p>
+                            <p class="bt-textoazul">&lt;li&gt;</p>
+                        </div>
+                        <div class="bt-li-materia">
+                            <p class="bt-textoazul">&lt;li&gt;</p>
+                            <p class="bt-textoblanco"> Programación II </p>
+                            <p class="bt-textoazul">&lt;li&gt;</p>
+                        </div>
+                        <div class="bt-li-materia">
+                            <p class="bt-textoazul">&lt;li&gt;</p>
+                            <p class="bt-textoblanco"> Redes I </p>
+                            <p class="bt-textoazul">&lt;li&gt;</p>
+                        </div>
+                        <div class="bt-li-materia">
+                            <p class="bt-textoazul">&lt;li&gt;</p>
+                            <p class="bt-textoblanco"> Base de Datos I </p>
+                            <p class="bt-textoazul">&lt;li&gt;</p>
+                        </div>
+                    </div>
+                    <p class="bt-textoazul">&lt;/ol&gt;</p>
+                </div>
+                <p class="bt-textoazul">&lt;/div&gt;</p>
+                <div class="bt-titulo-materias">
+                    <p class="bt-textoazul">&lt;div class=</p>
+                    <p class="bt-textonaranja">"Materias" </p>
+                    <p class="bt-textoazul">id=</p>
+                    <p class="bt-textonaranja">"6to" </p>
+                    <p class="bt-textoazul">&gt;</p>
+                </div>
+                <div class="bt-materia">
+                    <div class="bt-p-materias">
+                        <p class="bt-textoazul">&lt;p&gt;</p>
+                        <p class="bt-textoblanco"> Estas son las materias que encontrarás en 6to año </p>
+                        <p class="bt-textoazul">&lt;/p&gt;</p>
+                    </div>
+                    <p class="bt-textoazul">&lt;ol&gt;</p>
+                    <div class="bt-materias">
+                        <div class="bt-li-materia">
+                            <p class="bt-textoazul">&lt;li&gt;</p>
+                            <p class="bt-textoblanco"> Programación III </p>
+                            <p class="bt-textoazul">&lt;li&gt;</p>
+                        </div>
+                        <div class="bt-li-materia">
+                            <p class="bt-textoazul">&lt;li&gt;</p>
+                            <p class="bt-textoblanco"> Redes II </p>
+                            <p class="bt-textoazul">&lt;li&gt;</p>
+                        </div>
+                        <div class="bt-li-materia">
+                            <p class="bt-textoazul">&lt;li&gt;</p>
+                            <p class="bt-textoblanco"> Base de Datos II </p>
+                            <p class="bt-textoazul">&lt;li&gt;</p>
+                        </div>
+                        <div class="bt-li-materia">
+                            <p class="bt-textoazul">&lt;li&gt;</p>
+                            <p class="bt-textoblanco"> Análisis, Especificación y Diseño de Software </p>
+                            <p class="bt-textoazul">&lt;li&gt;</p>
+                        </div>
+                        <div class="bt-li-materia">
+                            <p class="bt-textoazul">&lt;li&gt;</p>
+                            <p class="bt-textoblanco"> Prácticas Profesionalizantes </p>
+                            <p class="bt-textoazul">&lt;li&gt;</p>
+                        </div>
+                        <div class="bt-li-materia">
+                            <p class="bt-textoazul">&lt;li&gt;</p>
+                            <p class="bt-textoblanco"> Codificación y Representación de Datos </p>
+                            <p class="bt-textoazul">&lt;li&gt;</p>
+                        </div>
+                    </div>
+                    <p class="bt-textoazul">&lt;/ol&gt;</p>
+                </div>
+                <p class="bt-textoazul">&lt;/div&gt;</p>
+
+
+
+                <div class="bt-titulo-materias">
+                    <p class="bt-textoazul">&lt;div class=</p>
+                    <p class="bt-textonaranja">"Materias" </p>
+                    <p class="bt-textoazul">id=</p>
+                    <p class="bt-textonaranja">"7mo" </p>
+                    <p class="bt-textoazul">&gt;</p>
+                </div>
+                <div class="bt-materia">
+                    <div class="bt-p-materias">
+                        <p class="bt-textoazul">&lt;p&gt;</p>
+                        <p class="bt-textoblanco"> Estas son las materias que encontrarás en 7mo año </p>
+                        <p class="bt-textoazul">&lt;/p&gt;</p>
+                    </div>
+                    <p class="bt-textoazul">&lt;ol&gt;</p>
+                    <div class="bt-materias">
+                        <div class="bt-li-materia">
+                            <p class="bt-textoazul">&lt;li&gt;</p>
+                            <p class="bt-textoblanco"> Sistemas de Procesamiento de Datos </p>
+                            <p class="bt-textoazul">&lt;li&gt;</p>
+                        </div>
+                        <div class="bt-li-materia">
+                            <p class="bt-textoazul">&lt;li&gt;</p>
+                            <p class="bt-textoblanco"> Programación IV </p>
+                            <p class="bt-textoazul">&lt;li&gt;</p>
+                        </div>
+                        <div class="bt-li-materia">
+                            <p class="bt-textoazul">&lt;li&gt;</p>
+                            <p class="bt-textoblanco"> Taller de Ingeniería de Software </p>
+                            <p class="bt-textoazul">&lt;li&gt;</p>
+                        </div>
+                        <div class="bt-li-materia">
+                            <p class="bt-textoazul">&lt;li&gt;</p>
+                            <p class="bt-textoblanco"> Diseño Multimedial </p>
+                            <p class="bt-textoazul">&lt;li&gt;</p>
+                        </div>
+                        <div class="bt-li-materia">
+                            <p class="bt-textoazul">&lt;li&gt;</p>
+                            <p class="bt-textoblanco"> Desarrollo de proyectos de Software </p>
+                            <p class="bt-textoazul">&lt;li&gt;</p>
+                        </div>
+                        <div class="bt-li-materia">
+                            <p class="bt-textoazul">&lt;li&gt;</p>
+                            <p class="bt-textoblanco"> Practicas Profesionalizantes </p>
+                            <p class="bt-textoazul">&lt;li&gt;</p>
+                        </div>
+                    </div>
+                    <p class="bt-textoazul">&lt;/ol&gt;</p>
+                </div>
+                <p class="bt-textoazul">&lt;/div&gt;</p>
+            </div>
+    </div>
+    </section>
+    <!-- Termina Vista de Plan de Estudio -->
+    </div>
+
+
+    <!-- -----------------------------------------electronica------------------ -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <div id="LX-electronica-completo" class="LX-electronica-completo display-none">
+        <!-- Sección de Electrónica -->
+        <section class="LX-intro">
+            <h1>Electrónica</h1>
+        </section>
+        <!--comienza la seccion de bienvenida-->
+        <section class="LX-bienvenida">
+            <h2>¡Bienvenidos al apartado de Electrónica!</h2>
+            <div class="LX-bienvenida-texto">
+                <p style="font-size: 20px;
+    margin-right: 160px;">La Electrónica es una rama fundamental tanto de la física como de la Ingeniería, dedicada al
+                    estudio y
+                    aplicación de circuitos formados por componentes eléctricos y electrónicos. Estos circuitos son la
+                    base
+                    sobre la cual se construyen una variedad de dispositivos, desde los más simples como un interruptor
+                    de
+                    luz, hasta los más complejos, como los sistemas de control automatizados que encontramos en la
+                    industria
+                    moderna o los avanzados equipos de telecomunicaciones que conectan al mundo. Estos pueden formar
+                    parte
+                    de dispositivos y otros aparatos más complejos. Aquí, en nuestro colegio, se hace un fuerte hincapié
+                    en
+                    el desarrollo de las habilidades técnicas y prácticas en los alumnos que deciden especializarse en
+                    esta
+                    disciplina.</p>
+                <img class="LX-bienvenida-imagen" src="./public/img/electronica/banner (3).jpg">
+            </div>
+        </section>
+        <!--termina la seccion de bienvenida-->
+        <!--comienza la seccion de oferta educativa-->
+        <section class="LX-oferta-educativa">
+            <h2>Oferta Educativa</h2>
+            <p style="font-size: 20px;
+    margin-right: 160px;">El Colegio Técnico Ushuaia, especialidad Electrónica, ofrece programas enfocados al ciclo de aprendizaje
+                basado en saberes teóricos y prácticos, con el claro propósito de formar líderes útiles para nuestra
+                sociedad.</p>
+            <p style="font-size: 20px;
+    margin-right: 160px;">Este programa está diseñado para facilitar y reforzar el conocimiento mediante el desarrollo de
+                actividades
+                de generación que facilitan la adquisición del conocimiento y la realización de prácticas que ayudan a
+                nuestros alumnos a obtener el mayor beneficio de su tiempo de estudio.</p>
+            <p>A continuación, conozca nuestros programas educativos de la especialidad.</p>
+        </section>
+        <!--termina la seccion de oferta educativa-->
+
+        <!-- Sección de Materias -->
+        <section class="LX-materias">
+            <h2>Materias:</h2>
+            <div class="LX-grid">
+                <!--Tarjetas del Programa educativo-->
+                <div class="LX-card-1">
+                    <div class="LX-card-background">
+                        <div class="LX-card-text">
+                            <h3>Cuarto Año</h3>
+                            <ul>
+                                <li>Materiales e Instalaciones Eléctricas y Electrónicas</li>
+                                <li>Práctica de Electronica I</li>
+                                <li>Circuitos Eléctricos y Redes I</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <!-- Fin Tarjeta-->
+                <!--Tarjeta del Programa educativo-->
+                <div class="LX-card-2">
+                    <div class="LX-card-background">
+                        <div class="LX-card-text">
+                            <h3>Quinto Año</h3>
+                            <ul>
+                                <li>Ensayos y Mediciones</li>
+                                <li>Electronica</li>
+                                <li>Electronica Digital</li>
+                                <li>Práctica de Electronica II</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <!-- Fin Tarjeta-->
+                <!--Tarjeta del Programa educativo-->
+                <div class="LX-card-3">
+                    <div class="LX-card-background">
+                        <div class="LX-card-text">
+                            <h3>Sexto Año</h3>
+                            <ul>
+                                <li>Ensayos y Mediciones</li>
+                                <li>Circuitos Eléctricos y Redes II</li>
+                                <li>Electronica</li>
+                                <li>Electronica Digital</li>
+                                <li>Prácticas de Electrónica III</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <!-- Fin Tarjeta-->
+                <!--Tarjeta del Programa educativo-->
+                <div class="LX-card-4">
+                    <div class="LX-card-background">
+                        <div class="LX-card-text">
+                            <h3>Séptimo Año</h3>
+                            <ul>
+                                <li>Maquinas e Instalaciones Electro-Electrónicas</li>
+                                <li>Sistemas Electrónicos de Control</li>
+                                <li>Electronica Industrial</li>
+                                <li>Sistemas de Modulacion y Enlace de Telcomunicaciones</li>
+                                <li>Instrumentacion y Control</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <!-- Fin Tarjeta-->
+            </div>
+        </section>
+        <!--Termina la seccion de materias-->
+    </div>
+    <!-- ------------------------------------------ electromecanica------------------------------>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <div id="CV-electromecanica-completo" class="CV-electromecanica-completo display-none">
+        <!-- portada Electromecánica -->
+        <div class="av-portadaE">
+            <img src="./public/img/electromecanica/portadaElectromecanica.png" alt="">
+            <div class="av-texto">
+                <h1>Técnico en Equipos
+                    e Instalaciones Electromecánicas
+                </h1>
+            </div>
+        </div>
+        <!-- portada electromeca -->
+        <!--descripcion Electromecánica (claribeloc)-->
+        <div class="cv-hbody">
+            <nav class="cv-nav">
+                <a href="#descripcion-conteiner" class="acv">Descripción</a>
+                <a href="#planEstudios-conteiner" class="acv">Plan de Estudios</a>
+                <a href="#alcanceDeTitulo-conteiner" class="acv">Alcances del título</a>
+                <a href="#proyectos-conteiner" class="acv">Proyectos</a>
+            </nav>
+        </div>
+
+        <div class="cv-cont-descrip" id="descripcion-conteiner">
+            <img src="./public/img/electromecanica/fotoDeSeñorElectromecanico.png" alt="imagen" class="cv-imge">
+            <div>
+                <h3 class="cv-hh3">Descripción General</h3>
+                <p class="cv-ph">El Técnico en Equipos e Instalaciones Electromecánicas está preparado para desempeñarse
+                    en diversas áreas relacionadas con el suministro de servicios esenciales, como energía eléctrica,
+                    vapor, aire comprimido, vacío, y combustibles en sus diferentes estados. Su capacitación le permite
+                    trabajar en empresas industriales, edificios comerciales, infraestructura urbana y otros entornos
+                    donde se requieren estos servicios.
+
+                    Este profesional es responsable de la instalación, mantenimiento y reparación de sistemas
+                    electromecánicos, garantizando su funcionamiento seguro y eficiente. Además, tiene habilidades para
+                    diagnosticar problemas técnicos y aplicar soluciones efectivas, asegurando que las operaciones
+                    cumplan con las normativas de seguridad y eficiencia.
+
+                    Su versatilidad y conocimientos técnicos lo convierten en un recurso valioso en sectores como la
+                    manufactura, la construcción y la gestión de energía, donde contribuye al desarrollo sostenible y a
+                    la optimización de recursos.</p>
+            </div>
+        </div>
+
+        <div id="planEstudios-conteiner">
+            <h3 class="cv-hh3">Plan de Estudios</h3>
+            <p class="cv-ph">T.M: Turno Mañana</p>
+            <p class="cv-ph">T.T: Turno Tarde</p>
+            <p class="cv-ph">T.V: Turno Vespertino</p>
+            <img src="./public/img/electromecanica/horariosElectro.png" alt="imagen" class="cv-tabla">
+        </div>
+
+
+        <!-- alcance del titulo -->
+        <div class="av-alcances" id="alcanceDeTitulo-conteiner">
+            <h4>Alcances de Título</h4>
+            <p>El Técnico en Equipos e Instalaciones Electromecánicas se especializa en el diseño, instalación y
+                mantenimiento de sistemas eléctricos y electromecánicos. Su formación permite a los egresados trabajar
+                en diversas áreas, como plantas de generación y transformación de energía, estaciones transformadoras y
+                sistemas de transmisión y distribución de electricidad.
+                Además, pueden realizar instalaciones eléctricas en edificios, locales comerciales y fábricas, así como
+                en sistemas de control y automatización. Esto incluye la construcción y mantenimiento de máquinas
+                eléctricas y equipos eléctricos en general.
+                Con un amplio abanico de salidas laborales, los Técnicos en Electromecánica son fundamentales en el
+                sector energético y en la industria, contribuyendo al desarrollo tecnológico y a la sostenibilidad. Su
+                perfil versátil los convierte en profesionales demandados en un mercado en constante evolución.
+            </p>
+        </div>
+        <!-- alcance del titulo -->
+
+        <!-- proyectos de Electromecánica
+    <div class="av-proyectos" id="proyectos-conteiner">
+        <div class="av-proyectoOpcional">
+            <h4>Proyecto Opcional: Electromecánica</h4>
+            <div class="av-imagen">
+            <img src="./public/img/electromecanica/ypf.jpg" alt="imagen" class=""> 
+            <div class="av-texto-2">
+                <p>Desafío Eco YPF –organizado por la Fundación YPF y Desafío Eco YPF- es una competencia automovilística en la que estudiantes de escuelas secundarias técnicas diseñan y construyen, con la guía de sus profesores y la fiscalización de técnicos especializados, automóviles ecológicos, alimentados por baterías eléctricas, capaces de recorrer la mayor distancia posible en un tiempo máximo de una hora y media. 
+                    Lo novedoso de este certamen es que ganan aquellos que administran mejor la energía de sus vehículos ecológicos</p>
+            </div>
+            </div>
+             <iframe class="av-video" src="" frameborder="1"></iframe> 
+        </div>
+        <div class="av-proyectoGeneral">
+            <h4>Proyectos Generales: Electromecánica</h4>
+            <div class="av-imagen">
+                <img src="./public/img/electromecanica/domos.png" alt="imagen">
+                <div class="av-texto-3">
+                    <p></p>
+                </div>
+            </div>
+        </div>
+    </div>  -->
+
+
+
+
+        <!-- proyectos de Electromecánica -->
+        <div class="av-proyectos" id="proyectos-conteiner">
+            <div class="av-proyectoOpcional">
+                <h4>Proyecto Opcional: Electromecánica</h4>
+                <div class="av-imagen">
+                    <img src="./public/img/electromecanica/ypf.png" alt="imagen" class="">
+                    <div class="av-texto-2">
+                        <p>Desafío Eco YPF –organizado por la Fundación YPF y Desafío Eco YPF- es una competencia
+                            automovilística en la que estudiantes de escuelas secundarias técnicas diseñan y construyen,
+                            con
+                            la guía de sus profesores y la fiscalización de técnicos especializados, automóviles
+                            ecológicos,
+                            alimentados por baterías eléctricas, capaces de recorrer la mayor distancia posible en un
+                            tiempo
+                            máximo de una hora y media.
+                            Lo novedoso de este certamen es que ganan aquellos que administran mejor la energía de sus
+                            vehículos ecológicos</p>
+                    </div>
+                </div>
+
+
+                <div class="cv-supuestoVideo">
+                    <img src="./public/img/electromecanica/ypf.jpg" alt="supuestoVideo" class="cv-videoypf">
+                </div>
+                <!-- <iframe class="video" src="" frameborder="1"></iframe> -->
+            </div>
+            <div class="av-proyectoGeneral">
+                <h4>Proyectos Generales: Electromecánica</h4>
+                <div class="av-imagen">
+                    <img src="./public/img/electromecanica/domos.png" alt="imagen">
+                    <div class="av-texto-2">
+                        <p>Desafío Eco YPF –organizado por la Fundación YPF y Desafío Eco YPF- es una competencia
+                            automovilística en la que estudiantes de escuelas secundarias técnicas diseñan y construyen,
+                            con
+                            la guía de sus profesores y la fiscalización de técnicos especializados, automóviles
+                            ecológicos,
+                            alimentados por baterías eléctricas, capaces de recorrer la mayor distancia posible en un
+                            tiempo
+                            máximo de una hora y media.
+                            Lo novedoso de este certamen es que ganan aquellos que administran mejor la energía de sus
+                            vehículos ecológicos</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+
+
+
+
+        <!-- proyectos de Electromecánica -->
+    </div>
+    <!-- -----------------------------------------preguntas frecuentes-------------------------------- -->
+
+
+
+
+
+
+
+
+
+
+
+
+    <div class="preguntas-f display-none">
+        <div class="av-portada">
+            <h1 class="av-titulo">Preguntas Frecuentes</h1>
+        </div>
+        <!-- portada Preguntas Frecuentes -->
+
+        <!-- todas las Preguntas Frecuentes -->
+        <div class="av-contenedor">
+            <div class="av-contenedor-pregunta">
+                <div class="av-preguntas">
+                    <button class="av-boton"><img class="av-flechaA"
+                            src="./public/img/preguntasFrecuentes/flechaAbajo.png" alt=""></button>
+                    <h3 class="av-pregunta">¿Quién es Olga Bronzovich de Arko?</h3>
+                </div>
+                <div class="av-respuesta">
+                    <p>
+                        Fue una mujer la cuál llegó a la directividad del colegio en 1962 y
+                        falleció en 1996, 4 años después se cambió el nombre del colegio a Colegio Técnico Provincial
+                        Olga B. de Arko en su conmemoración
+                    </p>
+                </div>
+            </div>
+            <div class="av-contenedor-pregunta">
+                <div class="av-preguntas">
+                    <button class="av-boton"><img class="av-flechaA"
+                            src="./public/img/preguntasFrecuentes/flechaAbajo.png" alt=""></button>
+                    <h3 class="av-pregunta">¿Es posible cambiar de especialidad durante el ciclo escolar?</h3>
+                </div>
+                <div class="av-respuesta">
+                    <p>
+                        Sí, es posible cambiar de especialidad durante el ciclo escolar. Para hacerlo, debes dirigirte a
+                        la coordinación, completar los formularios indicados y cumplir con los requisitos
+                        correspondientes. Sin embargo, es necesario rendir las materias específicas de la nueva
+                        especialidad a la que te cambies.
+
+                    </p>
+                </div>
+            </div>
+            <div class="av-contenedor-pregunta">
+                <div class="av-preguntas">
+                    <button class="av-boton"><img class="av-flechaA"
+                            src="./public/img/preguntasFrecuentes/flechaAbajo.png" alt=""></button>
+                    <h3 class="av-pregunta">¿Cuáles son las oportunidaes laborales de cada especialidad?</h3>
+                </div>
+                <div class="av-respuesta">
+                    <p>
+                        Programación: Los estudiantes pueden acceder a trabajos de soporte en tecnología, como
+                        asistentes en desarrollo de software, pruebas de aplicaciones, diseño web y mantenimiento de
+                        bases de datos. También pueden realizar tareas en redes, ciberseguridad básica y soporte técnico
+                        en empresas de tecnología o departamentos de TI.
+                    </p>
+                    <p>Maestro Mayor de Obras: Los egresados pueden ingresar a trabajos de asistencia en construcción,
+                        apoyo en supervisión de obras, relevamiento de espacios, y colaborar en estudios de arquitectura
+                        o empresas constructoras en tareas de mantenimiento, presupuesto y control de calidad.
+
+                    </p>
+
+                    <p>Electrónica: Los estudiantes pueden trabajar como asistentes en reparación de equipos
+                        electrónicos, soporte técnico en telecomunicaciones y mantenimiento de dispositivos
+                        electrónicos. También pueden desarrollarse en la instalación de sistemas básicos de
+                        automatización y domótica en residencias y empresas.
+
+                    </p>
+
+                    <p>Electromecánica: Esta especialidad permite ingresar en roles de mantenimiento y reparación de
+                        sistemas electromecánicos, tanto en industrias como en empresas de servicios. También hay
+                        oportunidades en el ensamblado de maquinaria y en el apoyo a la instalación de sistemas de
+                        energías renovables, como paneles solares.
+
+                    </p>
+
+                    <p>Administración y Gestión: Los egresados pueden trabajar en puestos de auxiliar administrativo,
+                        apoyo en áreas contables y financieras, y en tareas de gestión de inventario y atención al
+                        cliente en diferentes tipos de empresas, así como colaborar en proyectos y emprender negocios.
+
+                    </p>
+                </div>
+            </div>
+            <div class="av-contenedor-pregunta">
+                <div class="av-preguntas">
+                    <button class="av-boton"><img class="av-flechaA"
+                            src="./public/img/preguntasFrecuentes/flechaAbajo.png" alt=""></button>
+                    <h3 class="av-pregunta">¿Cuáles son los fines educativos del colegio?</h3>
+                </div>
+                <div class="av-respuesta">
+                    <p> Los fines educativos del colegio incluyen:</p>
+
+                    <p>1. Formación integral: Preparar a los estudiantes para integrarse a una sociedad democrática, al
+                        mundo laboral y para continuar estudios superiores.
+
+                    </p>
+                    <P>2. Formación técnica: Capacitar a los estudiantes en áreas ocupacionales específicas mediante un
+                        proceso educativo que fomente competencias profesionales.
+
+                    </P>
+                    <P>3. Trayectorias de profesionalización: Garantizar que los estudiantes adquieran competencias y
+                        valores que integren teoría y práctica, facilitando su incorporación en el área ocupacional
+                        elegida.
+
+                    </P>
+                </div>
+            </div>
+            <div class="av-contenedor-pregunta">
+                <div class="av-preguntas">
+                    <button class="av-boton"><img class="av-flechaA"
+                            src="./public/img/preguntasFrecuentes/flechaAbajo.png" alt=""></button>
+                    <h3 class="av-pregunta">¿Qué tipo de laboratorios o talleres tiene la escuela?</h3>
+                </div>
+                <div class="av-respuesta">
+                    <p>
+                        Existen cinco tipos de talleres que los estudiantes pueden experimentar antes de elegir una
+                        especialidad: carpintería, electricidad, hojalatería, soldadura y electrónica. Además, el
+                        colegio cuenta con laboratorios de programación y de físico-química para complementar su
+                        formación práctica.
+                    </p>
+                </div>
+            </div>
+            <div class="av-contenedor-pregunta">
+                <div class="av-preguntas">
+                    <button class="av-boton"><img class="av-flechaA"
+                            src="./public/img/preguntasFrecuentes/flechaAbajo.png" alt=""></button>
+                    <h3 class="av-pregunta">¿Qué medidas de seguridad hay en los talleres?</h3>
+                </div>
+                <div class="av-respuesta">
+                    <p>
+                        Las medidas de seguridad en los talleres incluyen el uso obligatorio de vestimenta adecuada,
+                        como overol, guantes de soldadura, gafas de protección y otros elementos de seguridad según las
+                        actividades específicas.
+
+                    </p>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <!-- -------------------------------------------------construcciones------------------------------------ -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <div class="construcciones-completo display-none">
+        <div class="si-portada">
+            <div class="si-titulo">Maestro Mayor de Obra</div>
+        </div>
+
+        <div class="si-cons">
+            <img src="public/img/construcciones/diferencia-arquitecto-maestro-mayor-obras (1).jpg" class="si-image">
+            <div class="si-texto">
+                <h2>Descripción general</h2>
+                <p>"El Maestro Mayor de Obras es un técnico altamente capacitado en dirigir, planificar y ejecutar
+                    proyectos
+                    de construcción. Su responsabilidad principal es supervisar y coordinar cada etapa de una obra,
+                    desde la
+                    interpretación de los planos hasta su finalización. Esta especialidad te preparará para liderar
+                    equipos,
+                    gestionar recursos y garantizar que las construcciones se realicen de manera eficiente y segura,
+                    aplicando siempre los estándares de calidad y normativas vigentes."</p>
+            </div>
+        </div>
+        <div class="si-parte2">
+            <div class="si-lista1">
+                <h3> Alcance del Perfil Profesional</h3>
+                <p style="    margin-top: 30px"> El Maestro Mayor de Obra está capacitado para manifestar conocimientos, habilidades,
+                    destrezas, valores
+                    y actitudes en situaciones reales de trabajo, conforme a criterios de profesionalidad propios de su
+                    área
+                    y de responsabilidad social al:</p>
+            </div>
+
+            <div class="si-lista2">
+                <ul>
+                    <li>Analizar las necesidades de un cliente y elaborar el programa de necesidades.</li>
+                    <li>Elaborar anteproyectos de soluciones espaciales edilicias constructivas y técnicas para un
+                        programa
+                        de necesidades determinado.</li>
+                    <li>Proyectar soluciones espaciales edilicias, constructivas y técnicas para un anteproyecto
+                        determinado.</li>
+                    <li>Dirigir la ejecución de procesos constructivos en general.</li>
+                    <li>Gestionar y administrar la ejecución del proceso constructivo en general.</li>
+                    <li>Prestar servicios de evaluación técnica a terceros.</li>
+                </ul>
+            </div>
+        </div>
+
+
+        <!-- contenedor de parte de abajo de construcciones -->
+        <div class="si-parte_de_abajo_construcciones">
+            <!-- seccion de funciones del profesional-contrucciones -->
+            <section class="si-section-40-construcciones">
+                <!-- titulo de la seccion -->
+                <h4 class="si-subtitulo-construcciones">Funciones que ejerce el profesional</h4>
+                <!-- contenedor para las listaas desordenadas -->
+                <article class="si-article-60-construcciones">
+                    <!-- contenedor izquierdo de lista desordenada -->
+                    <div class="si-contenedor-lista-desordenada-funciones">
+                        <!-- lista desordenada -->
+                        <ul class="si-lista-desordenada-construcciones-funciones">
+                            <li>Concepción de la idea proyecto solución y toma de partido.
+                            </li>
+                            <li>El Maestro Mayor de Obras analiza las necesidades de un comitente y elabora el programa
+                                de Necesidades.
+                            </li>
+                            <li>Planificación estratégica del anteproyecto.
+                            </li>
+                            <li>Diseño y resolución constructiva de la propuesta.
+                            </li>
+                            <li>Elaboración de trabajos topográficos.
+                            </li>
+                            <li>Proyectar soluciones espaciales edilicias, constructivas y técnicas.
+                            </li>
+                            <li>Gestionar documentaciones técnicas.</li>
+                        </ul>
+                    </div>
+                    <!-- contenedor derecho de lista desordenada -->
+                    <div class="si-contenedor-lista-desordenada-funciones">
+                        <!-- lista desordenada -->
+                        <ul class="si-lista-desordenada-construcciones-funciones">
+                            <li>Actualizar información gráfica y escrita.
+                            </li>
+                            <li>Coordinación operativa de los procesos.
+                            </li>
+                            <li>Gestión y administración de trabajos de relevamiento topográfico.
+                            </li>
+                            <li>Dirección de la ejecución de procesos constructivos.
+                            </li>
+                            <li>Planificación, gestión y dirección de trabajos de mantenimiento de obras edilicias e
+                                instalaciones.
+                            </li>
+                            <li>Gestión y administración de la ejecución de procesos constructivos edilicios e
+                                instalaciones.
+                            </li>
+                            <li>Comunicación a los responsables de acontecimientos de la planificación y la gestión.
+                            </li>
+                        </ul>
+                    </div>
+                </article>
+                <!-- fin del contenedor para las listas desordenadas -->
+            </section>
+            <!-- fin de la seccion de funciones del profesional-contrucciones -->
+
+
+            <!-- seccion de construcciones plan de estudio Técnico Específico -->
+            <section class="si-section-60-construcciones">
+
+                <!-- titulo de la seccion Plan de estudio técnico especifico -->
+                <h4 class="si-subtitulo-construcciones">Plan de estudio Técnico Específico</h4>
+
+                <!-- contenedor para la imagen de fondo donde van a ir las tarjetas que giran sobre su eje -->
+                <div class="si-img-flex">
+
+                    <!-- contenedor para crear efecto de fondo de la imagen -->
+                    <div class="si-efecto-img">
+
+                        <!-- contenedor padre para el efecto de las tarjetas -->
+                        <div class="si-contenedor-padre-efecto">
+                            <!-- contendor para efecto de las tarjetas -->
+                            <div class="si-contenedor-para-efecto">
+                                <!-- contenedor de las dos vistas para la tarjetas -->
+                                <div class="si-tarjeta">
+                                    <!-- vista de delante de la tarjeta -->
+                                    <article class="si-contenedor-funcional-front">
+                                        <p class="si-texto-fn">4° año</p>
+                                        <img class="si-img-fn"
+                                            src="https://as2.ftcdn.net/v2/jpg/05/53/89/07/1000_F_553890715_LJqMQrTiJT9IqqD2LLpcO9HIqaYSIyQP.jpg"
+                                            alt="">
+                                    </article>
+                                    <!-- vista de detras de la tarjeta -->
+                                    <article class="si-contenedor-funcional-back">
+                                        <h4>Materias</h4>
+                                        <ul>
+                                            <li>• Dibujo Tecnológico</li>
+                                            <li>• Interpretación de Anteproyectos</li>
+                                            <li>• Planificación de Obra</li>
+                                            <li>• Sistemas Constructivos</li>
+                                            <li>• Proyecto</li>
+                                        </ul>
+                                    </article>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- fin de contenedor padre para el efecto de las tarjetas -->
+
+
+                        <!-- contenedor padre para el efecto de las tarjetas -->
+                        <div class="si-contenedor-padre-efecto">
+                            <!-- contendor para efecto de las tarjetas -->
+                            <div class="si-contenedor-para-efecto">
+                                <!-- contenedor de las dos vistas para la tarjetas -->
+                                <div class="si-tarjeta">
+                                    <!-- vista de delante de la tarjeta -->
+                                    <article class="si-contenedor-funcional-front">
+                                        <p class="si-texto-fn">5° año</p>
+                                        <img class="si-img-fn"
+                                            src="https://t4.ftcdn.net/jpg/05/53/89/51/360_F_553895147_U56cm2PeKj0vGWGI95nzItbFs6kognnl.webp"
+                                            alt="">
+                                    </article>
+                                    <!-- vista de detras de la tarjeta -->
+                                    <article class="si-contenedor-funcional-back">
+                                        <h4>Materias</h4>
+                                        <ul>
+                                            <li>• Documentación técnica</li>
+                                            <li>• Materiales de Obra</li>
+                                            <li>• Sistemas Constructivos</li>
+                                            <li>• Proyecto</li>
+                                        </ul>
+                                    </article>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- fin de contenedor padre para el efecto de las tarjetas -->
+
+
+                        <!-- contenedor padre para el efecto de las tarjetas -->
+                        <div class="si-contenedor-padre-efecto">
+                            <!-- contendor para efecto de las tarjetas -->
+                            <div class="si-contenedor-para-efecto">
+                                <!-- contenedor de las dos vistas para la tarjetas -->
+                                <div class="si-tarjeta">
+                                    <!-- vista de delante de la tarjeta -->
+                                    <article class="si-contenedor-funcional-front">
+                                        <p class="si-texto-fn">6° año</p>
+                                        <img class="si-img-fn"
+                                            src="https://www.shutterstock.com/image-vector/one-continuous-line-drawing-boy-600nw-2177526013.jpg"
+                                            alt="">
+                                    </article>
+                                    <!-- vista de detras de la tarjeta -->
+                                    <article class="si-contenedor-funcional-back">
+                                        <h4>Materias</h4>
+                                        <ul>
+                                            <li>• Proyectos de Instalaciones</li>
+                                            <li>• Dirección de la Ejecución de Instalaciones</li>
+                                            <li>• Sistemas Constructivos</li>
+                                            <li>• Proyecto</li>
+                                        </ul>
+                                    </article>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- fin de contenedor padre para el efecto de las tarjetas -->
+
+
+                        <!-- contenedor padre para el efecto de las tarjetas -->
+                        <div class="si-contenedor-padre-efecto">
+                            <!-- contendor para efecto de las tarjetas -->
+                            <div class="si-contenedor-para-efecto">
+                                <!-- contenedor de las dos vistas para la tarjetas -->
+                                <div class="si-tarjeta">
+                                    <!-- vista de delante de la tarjeta -->
+                                    <article class="si-contenedor-funcional-front">
+                                        <p class="si-texto-fn">7° año</p>
+                                        <img class="si-img-fn"
+                                            src="https://encrypted-tbn3.gstatic.com/images?q=tbn:ANd9GcTd2v4Uq7BAPQZQsu-39mA2-1MbDVXxukx0AKa25aEqx5bwNJhK"
+                                            alt="">
+                                    </article>
+                                    <!-- vista de detras de la tarjeta -->
+                                    <article class="si-contenedor-funcional-back">
+                                        <h4>Materias</h4>
+                                        <ul>
+                                            <li>• Proyecto Final</li>
+                                            <li>• Dirección de Obra</li>
+                                            <li>• Ejercicio Profesional de la Construcción</li>
+                                        </ul>
+                                    </article>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- fin de contenedor padre para el efecto de las tarjetas -->
+
+                    </div>
+                    <!-- fin del contenedor para el efecto de fondo de la imagen -->
+
+                </div>
+                <!-- fin del contenedor para la imagen de fondo donde van a ir las tarjetas que giran sobre su eje -->
+
+            </section>
+            <!-- fin de seccion de construcciones plan de estudio Técnico Específico -->
+        </div>
+        <!-- fin del contendor de la parte de abajo de construcciones -->
+    </div>
+
+    <!-- ---------------------------------------------------administracion----------------------------------- -->
+
+
+
+
+
+
+
+
+
+
+
+    <div class="administracion-completo display-none">
+        <!-- contenedor  de la parte de arriba de administracion -->
+        <div class="admin-parte-arriba">
+            <!-- seccion de admin que contiene el banner de administracion -->
+            <section class="admin-logo">
+                <!-- contenedor para el efecto de fondo de la imagen -->
+                <div class="efecto-admin-logo">
+                    <!-- titulo de la imagen -->
+                    <h2 class="subtitulo-logo">Administración</h2>
+                </div>
+                <!-- fin del contenedor para el efecto de fondo de la imagen -->
+            </section>
+            <!-- fin de la seccion de admin que contiene el banner de administracion -->
+
+            <!-- seccion de admin qeu contiene informacion (Qué es la Tecnicatura en Gestión y Administracion de las organizaciones) -->
+            <section class="section-admin-20">
+                <!-- titulo de la seccion -->
+                <h2 class="subtitulos-admin">¿Qué es la Tecnicatura en Gestión y Administracion de las organizaciones
+                </h2>
+                <p class="texto-admin-info">La Tecnicatura en Gestión y Administración de las Organizaciones forma
+                    profesionales capacitados para enfrentar los desafíos de la administración moderna. Los estudiantes
+                    adquieren herramientas para la gestión eficiente de recursos, planificación estratégica y toma de
+                    decisiones dentro de empresas e instituciones, tanto públicas como privadas. Esta carrera abre
+                    oportunidades para desarrollar habilidades administrativas en un entorno organizacional dinámico y
+                    competitivo.</p>
+            </section>
+            <!-- fin de la seccion de (Qué es la Tecnicatura en Gestión y Administracion de las organizaciones) -->
+
+            <div class="linea-divisoria-admin"></div>
+
+            <!-- seccion de las tarjetas de infromacion de la especialidad -->
+            <section class="section-admin-40">
+                <!-- imagen 1 -->
+                <article class="tarjetas-admin-pde tarjetas-admin-h"
+                    onclick="location.href='#seccion-perfil-de-egresado-admin'">
+                    <h3 class="subtitulo-tarjetas-admin">Perfil de<br> egresado</h3>
+                </article>
+                <!-- fin de imagen 1 -->
+                <!-- imagen 2 -->
+                <article class="tarjetas-admin-obj tarjetas-admin-h" onclick="location.href='#seccion-objetivos-admin'">
+                    <h3 class="subtitulo-tarjetas-admin">Objetivos</h3>
+                </article>
+                <!-- fin de imagen 2 -->
+                <!-- imagen 3 -->
+                <article class="tarjetas-admin-sl tarjetas-admin-h"
+                    onclick="location.href='#seccion-salida-laboral-admin'">
+                    <h3 class="subtitulo-tarjetas-admin">Salida <br>laboral</h3>
+                </article>
+                <!-- fin de imagen 3 -->
+                <!-- imagen 4 -->
+                <article class="tarjetas-admin-est tarjetas-admin-h"
+                    onclick="location.href='#seccion-plan-de-estudios-admin'">
+                    <h3 class="subtitulo-tarjetas-admin">Plan de<br> estudios</h3>
+                </article>
+                <!-- fin de imagen 4 -->
+            </section>
+            <!-- fin de la seccion de las tarjetas de infromacion de la especialidad -->
+
+            <div class="linea-divisoria-admin"></div>
+
+            <!-- seccion de adimistracion de (¿Cuál es el perfil del egresado en la Tecnicatura en Gestión y Administración de las Organizaciones?) -->
+            <section class="section-admin-60" id="seccion-perfil-de-egresado-admin">
+                <!-- titulo de la seccion -->
+                <h2 class="subtitulos-admin">¿Cuál es el perfil del egresado en la Tecnicatura en Gestión y
+                    Administración
+                    de las Organizaciones?</h2>
+                <!-- linea divisoria pequeña para el diseño de la pagina  -->
+                <div class="linea-divisoria-small"></div>
+                <!-- lista desorednada para los item de la seccion -->
+
+                <ul class="lista-desordenada-admin">
+                    <div class="esquina-derecha">
+                        <li>
+                            <!-- caja para crear el efecto de color de fondo -->
+                            <div class="caja-texto-admin">
+                                <p class="texto-admin">El egresado de la Tecnicatura en Gestión y Administración de las
+                                    Organizaciones se caracteriza por ser un profesional con una sólida formación en la
+                                    administración y gestión de empresas y organizaciones, tanto públicas como privadas.
+                                    Está
+                                    capacitado para coordinar y optimizar los recursos financieros, humanos y
+                                    materiales, así
+                                    como para implementar procesos eficientes que promuevan el crecimiento y la
+                                    sostenibilidad
+                                    de las instituciones en las que participa.</p>
+                            </div>
+                            <!-- fin de caja para crear el efecto de color de fondo -->
+                        </li>
+                        <li>
+                            <!-- caja para crear el efecto de color de fondo -->
+                            <div class="caja-texto-admin">
+                                <p class="texto-admin">Entre sus habilidades destacan la capacidad de planificar y
+                                    ejecutar
+                                    estrategias organizacionales, gestionar procesos contables y financieros, y manejar
+                                    herramientas tecnológicas para la administración de información. Además, cuenta con
+                                    competencias para analizar datos, elaborar informes de gestión, coordinar el área de
+                                    recursos humanos y garantizar el cumplimiento de normas legales y fiscales.</p>
+                            </div>
+                            <!-- fin de caja para crear el efecto de color de fondo -->
+                        </li>
+                        <li>
+                            <!-- caja para crear el efecto de color de fondo -->
+                            <div class="caja-texto-admin">
+                                <p class="texto-admin">El egresado también está preparado para adaptarse a entornos
+                                    cambiantes,
+                                    con una visión estratégica que le permite identificar oportunidades de mejora y
+                                    tomar
+                                    decisiones orientadas a la eficiencia. En definitiva, es un profesional clave en la
+                                    optimización de las operaciones y en la creación de valor dentro de las
+                                    organizaciones,
+                                    contribuyendo al éxito y la competitividad de las mismas.</p>
+                            </div>
+                            <!-- fin de caja para crear el efecto de color de fondo -->
+                        </li>
+                    </div>
+                </ul>
+            </section>
+            <!-- fin de la seccion de administracion de (¿Cuál es el perfil del egresado en la Tecnicatura en Gestión y Administración de las Organizaciones?) -->
+
+            <div class="linea-divisoria-admin"></div>
+        </div>
+        <!-- fin del contenedor de la parte de arriba de administracion -->
+
+        <!-- parte miaaaaaaaaa -->
+        <div class="si-tecnicatura">
+            <h2 class="subtitulos-admin" id="seccion-objetivos-admin">Objetivos de la Tecnicatura en Gestión y
+                Administración de las Organizaciones</h2>
+            <div class="linea-divisoriaa-admin"></div>
+
+            <ul class="lista-desordenada-admin-20">
+                <li>
+                    <div class="caja-texto-admin">
+                        <p class="texto-admin">Tecnicatura en Gestión y Administración de las Organizaciones tiene como
+                            objetivo principal formar
+                            profesionales capacitados para enfrentar los desafíos de la administración moderna en
+                            organizaciones de
+                            distintos tipos y sectores. Entre sus principales objetivos se destacan: </p>
+                    </div>
+                </li>
+            </ul>
+            <img src="Captura de pantalla 2024-10-25 032301.png" alt="" class="imagen-admin-texto">
+
+            <ul class="lista-desordenada-admin-30 lista-desordenada-admin">
+                <div class="esquina-derecha">
+                    <li>
+                        <p class="texto-admin">Desarrollar competencias en la planificación y gestión organizacional,
+                            proporcionando las
+                            herramientas necesarias para optimizar recursos y mejorar la eficiencia de las operaciones.
+                        </p>
+                    </li>
+                    <li>
+                        <p class="texto-admin">Brindar conocimientos sobre técnicas contables y financieras, permitiendo
+                            que los egresados puedan
+                            gestionar presupuestos, realizar balances y auditorías, y tomar decisiones económicas
+                            acertadas para
+                            las organizaciones.</p>
+                    </li>
+                    <li>
+                        <p class="texto-admin">Fomentar habilidades en el manejo de recursos humanos, orientadas a la
+                            organización y gestión de
+                            equipos de trabajo, promoviendo un clima laboral positivo y productivo.</p>
+                    </li>
+                    <li>
+                        <p class="texto-admin">Capacitar en el uso de tecnologías aplicadas a la administración,
+                            facilitando la automatización de
+                            procesos y el manejo de información clave para la toma de decisiones estratégicas.</p>
+                    </li>
+                    <li>
+                        <p class="texto-admin">Promover una visión ética y socialmente responsable, con el fin de formar
+                            profesionales
+                            comprometidos con el desarrollo sostenible y el respeto por las normativas y principios
+                            legales en
+                            el ámbito laboral.</p>
+                    </li>
+                    <li>
+                        <p class="texto-admin">Desarrollar una visión estratégica para identificar oportunidades y
+                            amenazas en el entorno económico
+                            y organizacional, preparándolos para proponer soluciones innovadoras y adaptarse a cambios
+                            constantes.</p>
+                    </li>
+                </div>
+            </ul>
+            <img src="Captura de pantalla 2024-10-25 032301.png" alt="" class="imagen1">
+
+            <ul class="lista-desordenada-admin-20">
+                <li>
+                    <div class="caja-texto-admin">
+                        <p class="texto-admin">Con estos objetivos, la tecnicatura busca formar profesionales que puedan
+                            contribuir al desarrollo y
+                            éxito de las organizaciones, tanto en contextos locales como globales.</p>
+                    </div>
+                </li>
+            </ul>
+            <div class="linea-divisoria-admin"></div>
+        </div>
+
+        <div class="si-laboral">
+            <h2 class="subtitulos-admin" id="seccion-salida-laboral-admin">Salida laboral de la tecnicatura de la
+                gestión y administración de organizaciones</h2>
+            <div class="linea-divisoriaa-admin"></div>
+            <ul class="lista-desordenada-admin-20">
+                <li>
+                    <div class="caja-texto-admin">
+                        <p class="texto-admin">Egresados de la Tecnicatura en Gestión y Administración de las
+                            Organizaciones cuentan con una amplia
+                            variedad de oportunidades laborales en diversos sectores, tanto públicos como privados.
+                            Gracias a su
+                            formación integral, están capacitados para desempeñarse en diferentes áreas de una
+                            organización, tales
+                            como:</p>
+                    </div>
+                </li>
+            </ul>
+            <img src="Captura de pantalla 2024-10-25 032301.png" alt="" class="imagen">
+            <ul class="lista-desordenada-admin-40 lista-desordenada-admin">
+                <div class="esquina-derecha">
+                    <li class="item-lista-des-admin">Administración General: Pueden ocupar cargos administrativos en
+                        empresas de distintos rubros,
+                        gestionando operaciones diarias, organizando recursos y colaborando en la implementación de
+                        estrategias
+                        organizacionales.</li>
+                    <li class="item-lista-des-admin">Gestión de Recursos Humanos: Están preparados para trabajar en
+                        áreas de selección, contratación,
+                        capacitación y gestión de personal, contribuyendo a mejorar el clima laboral y optimizar el
+                        desempeño
+                        del equipo.</li>
+                    <li class="item-lista-des-admin">Contabilidad y Finanzas: Los egresados pueden desempeñarse en
+                        tareas contables, de auditoría, análisis
+                        financiero, y gestión de presupuestos, garantizando un uso eficiente y transparente de los
+                        recursos de
+                        la organización.</li>
+                    <li class="item-lista-des-admin">Consultoría y Asesoría Empresarial:Están capacitados para ofrecer
+                        consultorías a pequeñas y medianas
+                        empresas (PyMEs), asesorando en la planificación estratégica, optimización de procesos y toma de
+                        decisiones para mejorar su competitividad.</li>
+                    <li class="item-lista-des-admin">Logística y Operaciones: Pueden trabajar en la planificación y
+                        coordinación de actividades logísticas,
+                        gestión de inventarios y optimización de la cadena de suministro, garantizando una mayor
+                        eficiencia en
+                        la distribución de productos y servicios.</li>
+                    <li class="item-lista-des-admin">Emprendimiento: La formación recibida también les brinda
+                        herramientas para iniciar y gestionar sus
+                        propios proyectos empresariales, con sólidos conocimientos en administración, finanzas y
+                        planificación.
+                    </li>
+                </div>
+            </ul>
+            <img src="Captura de pantalla 2024-10-25 032301.png" alt="" class="imagen1">
+
+
+            <ul class="lista-desordenada-admin-20">
+                <li>
+                    <div class="caja-texto-admin">
+                        <p class="texto-admin">Con una sólida base en gestión, administración y tecnología, los técnicos
+                            en Gestión y Administración de
+                            las Organizaciones están preparados para insertarse en el mercado laboral con habilidades
+                            que se adaptan a
+                            las necesidades actuales de las organizaciones en constante evolución.</p>
+                    </div>
+                </li>
+            </ul>
+        </div>
+
+
+        <div class="contenedor-subtitulo-admin">
+            <h2 class="subtitulos-admin" id="seccion-plan-de-estudios-admin">Plan de estudios de la tecnicatura de la
+                gestión y administración de organizaciones</h2>
+
+        </div>
+        <div class="linea-divisoriaa-admin"></div>
+        <ul class="lista-desordenada-admin-20">
+            <li class="item-des-20-admin">
+                <div class="caja-texto-admin-10">
+                    <p class="texto-admin-10">Materias de la especialidad:</p>
+                </div>
+            </li>
+        </ul>
+
+
+        <table class="caja-tabla-admin">
+            <tr class="tabla-tr-admin">
+                <th class="tabla-th-admin">4to año</th>
+                <th class="tabla-th-admin">6to año</th>
+            </tr>
+            <tr class="tabla-tr-admin">
+                <td class="si-lista-4to tabla-td-admin">
+                    Practicas del lenguajes<br>
+                    Educacion fisica<br>
+                    Ingles<br>
+                    Lenguajes Artisticos<br>
+                    Construcciones de la ciudadania <br>
+                    Historia<br>
+                    Fisica<br>
+                    Matematicas<br>
+                    Comportamiento Organizacional <br>
+                    Derecho<br>
+                    Administracion<br>
+                    Taller de informatica aplicada a la gestion<br>
+                    Sistemas de Informacion Contable I <br>
+                    Administracionde Recursos Humanos I
+                </td>
+                <td class="si-lista-6to tabla-td-admin">
+                    Practicas del lenguajes<br>
+                    Educacion fisica<br>
+                    Ingles<br>
+                    Filosofia<br>
+                    Matematicas<br>
+                    Administracion<br>
+                    Sistema de Informacion Contable III<br>
+                    Gestion de Compras y Ventas <br>
+                    Gestion de Clientes <br>
+                    Gestion de Ingreso y Egreso de Fondos
+                </td>
+            </tr>
+            <tr class="tabla-tr-admin">
+                <th class="tabla-th-admin">5to año</th>
+                <th class="tabla-th-admin">7mo año</th>
+            </tr>
+            <tr class="tabla-tr-admin">
+                <td class="si-lista-5to tabla-td-admin">
+                    Practicas del lenguajes<br>
+                    Educacion fisica<br>
+                    Ingles<br>
+                    Geografia<br>
+                    Salud y derecho<br>
+                    Matematicas<br>
+                    Derecho Econimico<br>
+                    Administracion<br>
+                    Taller de informatica aplicada a la gestion<br>
+                    Sistemas de Informacion Contable II <br>
+                    Administracionde Recursos Humanos II
+                </td>
+                <td class="si-lista-7to tabla-td-admin">
+                    Matematicas Financiera<br>
+                    Marco Juridico u Derechos del trabajo<br>
+                    Ingles tecnico <br>
+                    Contabilidad de Costos<br>
+                    Comercio Exterior<br>
+                    Gestion Financiera y Fuentes de Financiacion<br>
+                    Estados Contables <br>
+                    Liquidacion y Registracion de Remuneraciones<br>
+                    Relaciones Humanas
+                </td>
+            </tr>
+        </table>
+
+        <div class="linea-divisoria-admin"></div>
+
+    </div>
+
+
+
+
+
+    <!-- -----------------------------------taller-------------------------------------- -->
+
+
+
+
+
+
+    <div class="taller-completo display-none">
+        <div class="taller taller-electricidad">
+            <div class="filtro"></div>
+            <div class="taller-titulo"><span>Electricidad</span></div>
+            <img class="img-electricidad" src="./public/img/taller/imagen-electricidad.png"
+                alt="Imagen de Electricidad">
+            <div class="texto-talleres">
+                <p class="texto-electricidad">
+                    Enfocándonos en los fundamentos teóricos y en las habilidades prácticas necesarias para su
+                    aplicación en situaciones reales.
+                    La electricidad es una fuerza versátil que influye en nuestra vida cotidiana y en diversas
+                    profesiones.
+                    Al finalizar, esperamos que cada participante haya adquirido conocimientos y habilidades,
+                    así como un interés por el aprendizaje continuo en este campo. ¡Comencemos!
+                    En este taller, exploraremos el mundo de la electricidad,
+                </p>
+            </div>
+        </div>
+
+        <div class="taller taller-carpinteria">
+            <div class="filtro"></div>
+            <div class="taller-titulo"><span>Tecnología de la madera</span></div>
+            <img class="img-carpinteria" src="./public/img/taller/imagen-carpintera.png" alt="Imagen de Carpintería">
+            <div class="texto-talleres">
+                <p class="texto-carpinteria">
+                    El Taller de Carpintería del colegio técnico ofrece una formación integral
+                    en técnicas de trabajo con madera para estudiantes de 1° y 2° año.
+                    En 1° año, los alumnos aprenden a utilizar herramientas manuales, realizando proyectos simples y
+                    creativos.
+                    En 2° año, se introducen herramientas eléctricas, lo que les permite abordar proyectos más complejos
+                    con mayor eficiencia.
+                    El enfoque del taller no solo se centra en las habilidades técnicas, sino también en valores como la
+                    responsabilidad, el trabajo en equipo y la seguridad en el uso de herramientas.
+                    A través de la enseñanza práctica, los estudiantes desarrollan una base sólida para seguir
+                    explorando la carpintería con confianza y creatividad.
+                </p>
+            </div>
+        </div>
+
+        <div class="taller taller-electronica">
+            <div class="filtro"></div>
+            <div class="taller-titulo"><span>Electrónica</span></div>
+            <img class="img-electronica" src="./public/img/taller/imagen-electronica.png" alt="Imagen de Electrónica">
+            <div class="texto-talleres">
+                <p class="texto-electronica">
+                    El Taller de Electrónica del colegio técnico introduce a los estudiantes en las técnicas de
+                    ensamblaje y reparación de circuitos electrónicos.
+                    Desde el primer día, se enfocan en el aprendizaje práctico de la soldadura con estaño, utilizando
+                    soldadores para unir componentes en circuitos impresos.
+                    A través de proyectos prácticos, los alumnos trabajan con resistencias, condensadores y diodos,
+                    desarrollando habilidades esenciales para realizar conexiones sólidas.
+                    Este enfoque permite a los estudiantes comprender el funcionamiento de los circuitos mientras
+                    perfeccionan su técnica de soldadura.
+                    Al finalizar, estarán capacitados para montar y reparar circuitos, habilidades valiosas para
+                    estudios avanzados y el ámbito laboral.
+                </p>
+            </div>
+        </div>
+
+        <div class="taller taller-metales">
+            <div class="filtro"></div>
+            <div class="taller-titulo"><span>Tecnología de los metales</span></div>
+            <img class="img-metales" src="./public/img/taller/imagen-metales.png" alt="Imagen de Metales">
+            <div class="texto-talleres">
+                <p class="texto-metales">
+                    Hojalatería (Primer Año):
+                    En el taller de hojalatería, los estudiantes trabajan con chapa galvanizada, aprendiendo técnicas
+                    para cortar, doblar y ensamblar piezas de metal.
+                    Este taller desarrolla habilidades básicas para manipular materiales metálicos, permitiendo crear
+                    estructuras y componentes simples mediante el uso de herramientas manuales.
+                    Ajuste (Segundo Año):
+                    En el taller de ajuste, se enfocan en el ajuste mecánico y el ajuste milimétrico de piezas.
+                    Los estudiantes perfeccionan técnicas de precisión para trabajar con partes metálicas, asegurando
+                    que encajen perfectamente en un conjunto.
+                    Se emplean herramientas especializadas para medir, limar, y ajustar piezas a tolerancias exactas,
+                    esenciales en la manufactura mecánica.
+                </p>
+            </div>
+        </div>
+
+        <div class="taller taller-construcciones">
+            <div class="filtro"></div>
+            <div class="taller-titulo"><span>Construcciones</span></div>
+            <img class="img-construcciones" src="./public/img/taller/imagen-construcciones.png"
+                alt="Imagen de Construcciones">
+            <div class="texto-talleres">
+                <p class="texto-construcciones">
+                    El taller de construcciones tiene como objetivo brindar a los
+                    estudiantes una comprensión básica de los diferentes sistemas y técnicas utilizados en la
+                    construcción.
+                    Se exploran los tipos de sistemas constructivos, que incluyen métodos tradicionales, modernos y
+                    sostenibles. Además, se abordan los materiales de construcción y sus propiedades, técnicas de
+                    instalación,
+                    normativas de seguridad y buenas prácticas en el sitio de trabajo. A través de actividades prácticas
+                    y visitas a obras, los estudiantes aplican sus conocimientos y adquieren habilidades fundamentales
+                    para su futuro en el campo de la construcción.
+                </p>
+            </div>
+        </div>
+
+        <div class="taller taller-herreria">
+            <div class="filtro"></div>
+            <div class="taller-titulo"><span>Herrería y Soldadura</span></div>
+            <img class="img-herreria" src="./public/img/taller/imagen-herreria.png" alt="Imagen de Herrería">
+            <div class="texto-talleres">
+                <p class="texto-herreria">
+                    En este taller, los estudiantes aprenden a unir piezas metálicas mediante
+                    técnicas de soldadura.
+                    Se introducen a diferentes métodos de soldadura, como la soldadura por arco y la MIG, desarrollando
+                    habilidades para manipular herramientas y equipos de soldadura de manera segura.
+                    Los alumnos practican la preparación de las piezas, el control de la temperatura y la aplicación
+                    correcta del material de soldadura para lograr uniones fuertes y duraderas.
+                    Además, se enfatiza la importancia de la seguridad y el uso de equipos de protección personal
+                    durante el proceso. Al finalizar el taller,
+                    los estudiantes son capaces de realizar uniones metálicas efectivas y comprender la aplicación de la
+                    soldadura en proyectos de herrería.
+                </p>
+            </div>
+        </div>
+    </div>
+
+
+
+    <!-- -----------------------------------podio-------------------------------------- -->
+
+    <div class="si-podio display-none">
+        <img src="./public/img/podio/Podio.png" class="si-imagee">
+    </div>
+
+
+
+
+
+
+
+
+    <div id="footer" class="footer">
+        <footer>
+            <!--logo del colegio-->
+            <div class="colegio-logo"><img src="./public/img/footer/logoColegioHeader.png" alt="logo colegio"></div>
+
+            <!--seccion de especialidades-->
+            <div class="especialidades">
+
+                <h3>Especialidades</h3>
+                <p onclick="mostrarProgramacion()">Programacion</p>
+                <p onclick="mostrarAdministracion()">Administracion y Gestion</p>
+                <p onclick="mostrarElectronica()">Electronica</p>
+                <p onclick="mostrarElectromecanica()">Electromecanica</p>
+                <p onclick="mostrarMaestroMayorDeObra()">Maestro Mayor de Obras</p>
+
+            </div>
+            <!--termina la seccion de especialidades-->
+            <!--seccion de redes del colegio-->
+            <div class="redes_div">
+                <div class="redes-1"><img src="./public/img/footer/insta.png" alt="instagram"> <a
+                        href="https://www.instagram.com/ctpolgabdearko/?hl=es-la">@ctpolgabdearko</a></div>
+                <div class="redes-2"><img src="./public/img/footer/face.png" alt="facebook"> <a
+                        href="https://www.facebook.com/profile.php?id=61556694380469">Colegio Técnico Provincial "Olga
+                        B. de
+                        Arko" </a></div>
+                <div class="redes-3"><img src="./public/img/footer/call.png" alt="telefono">
+                    <p>02901 42-1457</p>
+                </div>
+                <div class="redes-4"> <img src="./public/img/footer/correo (1).png" alt="correo">
+                    <p>ctpobarko.sec@tdf.edu.ar</p>
+                </div>
+                <div class="redes-5"> <img src="./public/img/footer/maps.png" alt="google maps"> <a
+                        href="https://maps.app.goo.gl/1QUuymvQQzj4GArZ9">Gobernador Paz y Darwin,Ushuaia ,Argentina</a>
+                </div>
+            </div>
+            <!--termina la seccion de redes del colegio-->
+        </footer>
+    </div>
+    <script src="script.js"></script>
+</body>
+
+
+</html>
